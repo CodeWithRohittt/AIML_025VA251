@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,4 +105,112 @@
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Reverser</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input[type="number"]:focus {
+            border-color: #007bff;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Number Reverser</h2>
+    <input type="number" id="userInput" placeholder="Enter a number here...">
+    <br>
+    <button onclick="reverseNumber()">Reverse It!</button>
+    <div class="result" id="resultDisplay"></div>
+</div>
+
+<script>
+    function reverseNumber() {
+        // 1. Get the input value
+        const inputVal = document.getElementById('userInput').value;
+        const resultDisplay = document.getElementById('resultDisplay');
+
+        // Validation: Check if the input is empty
+        if (inputVal === "") {
+            resultDisplay.style.color = "red";
+            resultDisplay.innerHTML = "Please enter a valid number.";
+            return;
+        }
+
+        // Reset text color to default
+        resultDisplay.style.color = "#2c3e50";
+
+        // 2. JavaScript logic to reverse the number
+        // Convert to string, split into array, reverse it, and join it back
+        let reversedStr = inputVal.toString().split('').reverse().join('');
+        
+        // 3. Handle negative numbers correctly
+        // If the original number was negative, move the '-' from the end back to the front
+        if (inputVal < 0) {
+            reversedStr = '-' + reversedStr.replace('-', '');
+        }
+
+        // 4. Display the result
+        resultDisplay.innerHTML = `Reversed Number: ${reversedStr}`;
+    }
+</script>
+
+</body>
+>>>>>>> 3272993f4e2e548bd2ac1bf62d0305b3042e78fa
 </html>

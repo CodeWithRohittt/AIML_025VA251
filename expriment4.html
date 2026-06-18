@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,3 +85,91 @@
     </script>
     
 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Result Calculator</title>
+<link rel="stylesheet" href="experiment4.css">
+</head>
+<body>
+<div class="container">
+<h2>Student Result Calculator</h2>
+<label>Enter Number of Subjects</label><br>
+<input type="number" id="subjects"><br><br>
+<button onclick="calculateResult()">Calculate Result</button>
+<div id="result"></div>
+</div>
+</body>
+</html>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input[type="number"]:focus {
+            border-color: #007bff;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            min-height: 24px;
+        }
+    </style>
+<script>
+        function calculateResult() {
+            var subjects = document.getElementById("subjects").value;
+            var resultText = "";
+            if (subjects >= 5) {
+                resultText = "Congratulations! You have passed.";
+            } else {
+                resultText = "Sorry, you have failed. Please try again.";
+            }
+            document.getElementById("result").innerText = resultText;
+        }
+    </script>
+    
+
+>>>>>>> 3272993f4e2e548bd2ac1bf62d0305b3042e78fa

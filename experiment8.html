@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,4 +45,52 @@ return (
 </div>
 );
 }
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>React Counter App</title>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./App.css";
+ReactDOM.createRoot(document.getElementById("root")).render(
+<React.StrictMode>
+<App />
+</React.StrictMode>
+);
+App.jsx:
+import React, { useState } from "react";
+function App() {
+const [count, setCount] = useState(0);
+const increment = () => {
+setCount(count + 1);
+};
+const decrement = () => {
+setCount(count - 1);
+};
+const reset = () => {
+setCount(0);
+};
+return (
+<div className="container">
+<h1>React Counter Application</h1>
+<h2 className="counter">{count}</h2>
+<div className="buttons">
+<button onClick={increment}>Increment (+)</button>
+<button onClick={decrement}>Decrement (-)</button>
+<button onClick={reset}>Reset</button>
+</div>
+</div>
+);
+}
+>>>>>>> 3272993f4e2e548bd2ac1bf62d0305b3042e78fa
 export default App;
